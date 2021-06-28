@@ -1,0 +1,72 @@
+{% extends 'store/base.html' %}
+{% load static %}
+{% block content %}
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <h1>Order Entry Area</h1>
+                <br>
+                <br>
+                    <form action="" method="post">
+                    {% csrf_token %}
+                    <p>Product: {{form.products}} </p>
+                    <p>{{form.quantity.errors}}</p>
+                    {{ form.non_field_errors}}
+                    <p> Quantity: {{form.quantity}} <p id="stock">  </p> </p>
+                    <input type="submit" value="Add" id ="order-submit">
+                    </form>
+                <br>
+                {% if order.orderitem_set.count >= 1 %}
+                <button><a href="{%url 'invoice'%}"> Done and Print </a></button>
+                {% endif %}
+                <p><br></p>
+            </div>
+            <div class="col-1"></div>
+            
+            <div class="col-6">
+                <h1 style="text-align:center;"> Order Summery </h1>
+                    <table class = "table">
+                        <tr>
+                            <th> SL.No </th>
+                            <th> Item </th>
+                            <th> Qty </th>
+                            <th> Unit Price </th>
+                            <th>  Total </th>
+                        </tr>
+                        {% for item in order.orderitem_set.all  %}
+                        <tr>
+                            <td>  {{forloop.counter }}     </td>
+                            <td>  {{item.products.name}}   </td>
+                            <td>  {{item.quantity}}        </td>
+                            <td>  {{item.products.price}}  </td>
+                            <td>  {{item.get_total}}       </td>
+                        </tr>
+                        {% endfor %}
+                        <tr> <td></td>  <td></td>  <td></td> <td> Grand Total: </td> <td> {{order.grand_total}} </td> </tr>
+                    </table>
+                </div>
+                </div>
+                <br>
+                <br>
+                <br>
+            </div>
+        </div>
+    </div>
+
+
+
+{% endblock content %}
+
+
+{% block javascript %}
+<script>
+
+
+
+
+</script>
+{% endblock %}
+
+

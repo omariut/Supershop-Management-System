@@ -1,0 +1,115 @@
+body {
+    background-image: url("images/shupershop.jpg") no-repeat center;
+    background-size: cover;
+    }
+
+h1,h2,h3,h4,h5,h6{
+	color:hsl(0, 0%, 30%);
+}
+a{
+    text-decoration: none;
+}
+nav{
+    margin: 10px;
+    background-color: darkblue;
+    padding: 10px;
+
+
+}
+nav li{
+    
+    display: inline-flex;
+    padding-left: 10%;
+    padding-top: 1%;
+    
+    
+   
+
+}
+
+nav a{
+
+    color: white;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: none;
+    font-style: oblique;
+    font-weight: bold;
+
+}
+
+nav a:hover{
+
+    color:chartreuse;
+
+}
+.order-area{
+    background-color:rgb(228, 214, 214);
+    position: relative;
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 2px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 80%;
+    margin-top: 2%;
+    align-items: center;
+    left: 5%;
+    text-align: center;
+}
+
+.order-button{
+    background-color: greenyellow;
+    border-radius: 10px;
+    border-style: solid;
+    padding: 10px;
+    margin: 10px;
+    text-decoration: honeydew;
+    font-size: larger;
+}
+
+.print-button{
+
+    background-color: darkblue;
+    border-radius: 10px;
+    border-style: solid;
+    padding: 10px;
+    margin: 10px;
+    font-size: larger;
+    width: 200px;
+    font-weight: bold;
+    color: white;
+    position: relative;
+
+}
+
+
+  .qr-code{
+      position: relative;
+      text-align: center;
+  }
+
+.customer-form{
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+.col-4{
+
+    border-style: solid;
+}
+.col-6{
+    border-style: solid;
+    padding: 10px;
+}
+.table-bordered{
+    
+
+
+    width: 100%;
+}
+.col{
+text-align: center;
+border-style: solid;
+margin: 10px;
+padding: 10px;
+}

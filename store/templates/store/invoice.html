@@ -1,0 +1,66 @@
+{% extends 'store/base.html' %}
+{% load static %}
+{% block content %}
+
+
+
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-3"><a> <button onclick="printDiv('print')" class = "print-button"> Print  </button></a></div>
+    <div class="col-6">
+      <div id="print">
+        <div class="container print">
+          <div class="qr-code">
+            <p>Scan This QR_code for customer Details</p>
+            <img src="{% static 'qr-code/qr-code.png'%}" alt="QR-CODE">  
+          </div>
+          <br>
+          <br>
+         
+
+      <div>
+      <h1 style = "  text-align: center; ">Invoice</h1>
+     
+      <table class = "table-bordered" style= " text-align: center;">
+      <tr>
+          <th> SL.No </th>
+          <th> Item </th>
+          <th> Qty </th>
+          <th> Unit Price </th>
+          <th>  Total </th>
+      </tr>
+
+      {% for item in order.orderitem_set.all  %}
+
+      <tr>
+        <td>  {{forloop.counter }}     </td>
+        <td>  {{item.products.name}}   </td>
+        <td>  {{item.quantity}}        </td>
+        <td>  {{item.products.price}}  </td>
+        <td>  {{item.get_total}}       </td>
+    
+      </tr>
+      {% endfor %}
+      <tr> <td></td>  <td></td>  <td></td> <td> <strong> Grand Total: </strong>  </td> <td> <strong>{{order.grand_total}}</strong>  </td> </tr>
+
+    </table>
+
+<br>
+<br>
+<p style= "text-align:center">----End of the page---</p>
+    </div>
+      </div>
+        </div>
+          </div>
+            </div>
+              </div>
+
+
+
+
+
+
+{% endblock content %}
