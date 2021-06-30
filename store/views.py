@@ -62,7 +62,7 @@ def invoice(request):
     order = Order.objects.get(customer=customer)
     order.is_completed = True
     order.save()
-    # QR code generation
+    # QR code image generation
     qr = segno.make_qr('Name:' + customer.customer_name + '\n' +
                        'phone:' + customer.customer_phone + '\n' +
                        'E-mail:' + customer.customer_email)
