@@ -18,6 +18,7 @@ def customer_data_entry(request, msg=''):
             return HttpResponseRedirect('order-entry')
     else:
         form = CustomerForm()
+    
     context = {'form': form}
     return render(request, 'store/customer-data-entry.html', context)
 
@@ -49,6 +50,7 @@ def order_entry(request):
                     return HttpResponseRedirect('order-entry')
         else:
             form = OrderForm()
+        
         context = {'products': products, 'form': form,
                    'customer': customer, 'order': order}
         return render(request, 'store/order.html', context)
