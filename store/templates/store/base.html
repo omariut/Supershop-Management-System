@@ -15,15 +15,18 @@
 <body>
 
     <div class="container">
+    <div class="row">
+    <div class="col-12">
         <nav>
             <ul>
                 
                 <li> <a href= {%url 'home'%} >Home</a></li>
-                <li> <a href="products">All Products</a></li>
+                <li> <a href={%url 'admin:store_product_changelist' %}>All Products</a></li>
                 <li><a href={%url 'orders'%}> All Orders </a></li>
-                <li style="float: right;position: relative; right: 20%"> <a href="help">Help</a></li>
             </ul>
         </nav>
+    </div>
+    </div>
     </div>
 
     <div class="container">

@@ -20,7 +20,7 @@ from . import views
 urlpatterns = [
     path("", lambda request: render(request, 'store/home.html'), name="home"),
     path('customer-data-entry', views.customer_data_entry, name='customer-data-entry'),
-    path('order-entry', views.order_entry, name='order_entry'),
+    path('order-entry', views.order_entry, name='order-entry'),
     path('invoice', views.invoice, name='invoice'),
     path('orders/', views.OrderListView.as_view(), name='orders'),
     path('orders/<int:pk>', views.OrderDetailView.as_view(), name='order-details'),

@@ -11,19 +11,27 @@ a{
 }
 nav{
     margin: 10px;
+    width: 100%;
     background-color: darkblue;
     padding: 10px;
+    border-style: solid,  rgb(94, 255, 0);
+    
 
+
+}
+
+nav ul{
+    position: relative;
+    width: 80%;
+    left:20%;
+    right:20%;
 
 }
 nav li{
     
-    display: inline-flex;
+    display: inline-block;
     padding-left: 10%;
     padding-top: 1%;
-    
-    
-   
 
 }
 
